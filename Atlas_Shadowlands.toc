@@ -36,5 +36,5 @@
 ## RequiredDeps: Atlas
 
 Locale\Locales.xml
-Core.lua
-Data.lua
+Core\Core.lua
+Core\Data.lua

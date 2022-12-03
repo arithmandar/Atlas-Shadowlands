@@ -122,8 +122,8 @@ db.AtlasMaps = {
 		{ WHIT.." 3) "..Atlas_GetBossName("Tred'ova", 2405), 2405},
 	},
 	-- Halls of Atonement
-	HallsofAtonementA = {
-		ZoneName = { BZ["Halls of Atonement"]..ALC["MapA"] },
+	HallsofAtonement = {
+		ZoneName = { BZ["Halls of Atonement"] },
 		Location = { BZ["Revendreth"] },
 		DungeonID = 2074,
 		DungeonHeroicID = 2075,
@@ -133,29 +133,9 @@ db.AtlasMaps = {
 		Module = "Atlas_Shadowlands",
 		{ WHIT.." 1) "..Atlas_GetBossName("Halkias, the Sin-Stained Goliath", 2406), 2406},
 		{ WHIT.." 2) "..Atlas_GetBossName("Echelon", 2387), 2387},
-	},
-	HallsofAtonementB = {
-		ZoneName = { BZ["Halls of Atonement"]..ALC["MapB"] },
-		Location = { BZ["Revendreth"] },
-		DungeonID = 2074,
-		DungeonHeroicID = 2075,
-		DungeonMythicID = 2109,
-		WorldMapID = 1664,
-		JournalInstanceID = 1185,
-		Module = "Atlas_Shadowlands",
 		{ WHIT.." 3) "..Atlas_GetBossName("High Adjudicator Aleez", 2411), 2411},
 		{ WHIT..INDENT..Atlas_GetBossName("Ghastly Parishioner", 2411, 2), 2411},
 		{ WHIT..INDENT..Atlas_GetBossName("Vessel of Atonement", 2411, 3), 2411},
-	},
-	HallsofAtonementC = {
-		ZoneName = { BZ["Halls of Atonement"]..ALC["MapC"] },
-		Location = { BZ["Revendreth"] },
-		DungeonID = 2074,
-		DungeonHeroicID = 2075,
-		DungeonMythicID = 2109,
-		WorldMapID = 1663,
-		JournalInstanceID = 1185,
-		Module = "Atlas_Shadowlands",
 		{ WHIT.." 4) "..Atlas_GetBossName("Lord Chamberlain", 2413), 2413},
 	},
 	-- De Other Side
@@ -337,6 +317,8 @@ db.AtlasMaps = {
 		{ WHIT..INDENT..Atlas_GetBossName("Reanimated Warrior", 2391, 3), 2391},
 		{ WHIT..INDENT..Atlas_GetBossName("Reanimated Mage", 2391, 4), 2391},
 		{ WHIT..INDENT..Atlas_GetBossName("Reanimated Crossbowman", 2391, 5), 2391},
+		{ WHIT.." 4) "..Atlas_GetBossName("Nalthor the Rimebinder", 2396), 2396},
+		{ WHIT..INDENT..Atlas_GetBossName("Zolramus Siphoner", 2396, 2), 2396},
 	},
 	TheNecroticWakeB = {
 		ZoneName = { BZ["The Necrotic Wake"]..ALC["MapB"] },
@@ -350,19 +332,6 @@ db.AtlasMaps = {
 		Module = "Atlas_Shadowlands",
 		{ WHIT.." 3) "..Atlas_GetBossName("Surgeon Stitchflesh", 2392), 2392},
 		{ WHIT..INDENT..Atlas_GetBossName("Stitchflesh's Creation", 2392, 2), 2392},
-	},
-	TheNecroticWakeC = {
-		ZoneName = { BZ["The Necrotic Wake"]..ALC["MapC"] },
-		Location = { BZ["Bastion"] },
-		DungeonID = 2070,
-		DungeonHeroicID = 2071,
-		DungeonMythicID = 2114,
-		PlayerLimit = 5,
-		WorldMapID = 1666,
-		JournalInstanceID = 1182,
-		Module = "Atlas_Shadowlands",
-		{ WHIT.." 4) "..Atlas_GetBossName("Nalthor the Rimebinder", 2396), 2396},
-		{ WHIT..INDENT..Atlas_GetBossName("Zolramus Siphoner", 2396, 2), 2396},
 	},
 
 	-- ///////////////////////////////////////
@@ -526,10 +495,17 @@ db.AtlasMaps_NPC_DB = {
 		{ 2, 2403, 375, 227 },
 		{ 3, 2423, 324, 408 },
 	},
+	HallsofAtonement = {
+		{ 1, 2406, 290, 250 },
+		{ 2, 2387, 171, 250 },
+		{ 3, 2411, 65, 250 },
+		{ 4, 2413, 26, 250 },
+	},
 	TheNecroticWakeA = {
 		{ "B", 10002, 118, 244 },
 		{ 1, 2395, 295, 240 },
 		{ 2, 2391, 84, 240 },
+		{ 3, 2396, 65, 132 },
 	},
 }
 
@@ -640,6 +616,9 @@ db.DropDownLayouts = {
 	},
 	[ATLAS_DDL_EXPANSION] = {
 		[ATLAS_DDL_EXPANSION_SHADOWLANDS] = {
+			"DeOtherSideA",
+			"DeOtherSideB",
+			"HallsofAtonement",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"PlaguefallA",
@@ -647,6 +626,9 @@ db.DropDownLayouts = {
 	},
 	[ATLAS_DDL_LEVEL] = {
 		[ATLAS_DDL_LEVEL_45TO60] = {
+			"DeOtherSideA",
+			"DeOtherSideB",
+			"HallsofAtonement",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"PlaguefallA",
@@ -657,6 +639,9 @@ db.DropDownLayouts = {
 	},
 	[ATLAS_DDL_PARTYSIZE] = {
 		[ATLAS_DDL_PARTYSIZE_5] = {
+			"DeOtherSideA",
+			"DeOtherSideB",
+			"HallsofAtonement",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"PlaguefallA",
@@ -669,6 +654,9 @@ db.DropDownLayouts = {
 	},
 	[ATLAS_DDL_TYPE] = {
 		[ATLAS_DDL_TYPE_INSTANCE] = {
+			"DeOtherSideA",
+			"DeOtherSideB",
+			"HallsofAtonement",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"PlaguefallA",
