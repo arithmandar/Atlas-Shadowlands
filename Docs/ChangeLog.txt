@@ -8,5 +8,5 @@ Copyright 2022 - Arith Hsu, Atlas Team <atlas.addon at gmail dot com>
 
 v1.50.00 (Feb. XX, 2022)
 ------------------------
-- Toc update to support WoW 9.2.0
+- Toc update to support WoW 10.0.7
 - Initial version for WoW Shadowlands
