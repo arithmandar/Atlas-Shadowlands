@@ -1,5 +1,4 @@
-﻿-- $Id$
---[[
+﻿--[[
 
 	Atlas, a World of Warcraft instance map browser
 	Copyright 2022 - Arith Hsu, Atlas Team <atlas.addon at gmail dot com>
@@ -22,13 +21,10 @@
 
 --]]
 
-local FOLDER_NAME, private = ...
 
 local AceLocale = LibStub:GetLibrary("AceLocale-3.0");
 local L = AceLocale:NewLocale("Atlas_Shadowlands", "enUS", true, true);
 
 if L then
 	L["ATLAS_DDL_EXPANSION_SHADOWLANDS"] = "Shadowlands Instances"
-
-
 end

@@ -1,4 +1,3 @@
--- $Id$
 --[[
 
 	Atlas, a World of Warcraft instance map browser
@@ -30,11 +29,11 @@ local _G = getfenv(0)
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
-local FOLDER_NAME, private = ...
+local _, private = ...
 
 private.addon_name = "Atlas_Shadowlands"
 private.module_name = "Shadowlands"
 
 local LibStub = _G.LibStub
 local Atlas = LibStub("AceAddon-3.0"):GetAddon("Atlas")
-local SDL = Atlas:NewModule(private.module_name)
+local addon = Atlas:NewModule(private.module_name)

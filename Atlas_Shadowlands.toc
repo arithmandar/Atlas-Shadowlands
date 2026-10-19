@@ -1,39 +1,47 @@
-﻿## Interface: 100007
-#@non-debug@
-## Title: @localization(locale="enUS", key="Title", namespace="ToC")@
-## Title-deDE: @localization(locale="deDE", key="Title", namespace="ToC")@
-## Title-esES: @localization(locale="esES", key="Title", namespace="ToC")@
-## Title-esMX: @localization(locale="esMX", key="Title", namespace="ToC")@
-## Title-frFR: @localization(locale="frFR", key="Title", namespace="ToC")@
-## Title-itIT: @localization(locale="itIT", key="Title", namespace="ToC")@
-## Title-koKR: @localization(locale="koKR", key="Title", namespace="ToC")@
-## Title-ptBR: @localization(locale="ptBR", key="Title", namespace="ToC")@
-## Title-ruRU: @localization(locale="ruRU", key="Title", namespace="ToC")@
-## Title-zhCN: @localization(locale="zhCN", key="Title", namespace="ToC")@
-## Title-zhTW: @localization(locale="zhTW", key="Title", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Description", namespace="ToC")@
-## Notes-deDE: @localization(locale="deDE", key="Description", namespace="ToC")@
-## Notes-esES: @localization(locale="esES", key="Description", namespace="ToC")@
-## Notes-esMX: @localization(locale="esMX", key="Description", namespace="ToC")@
-## Notes-frFR: @localization(locale="frFR", key="Description", namespace="ToC")@
-## Notes-itIT: @localization(locale="itIT", key="Description", namespace="ToC")@
-## Notes-koKR: @localization(locale="koKR", key="Description", namespace="ToC")@
-## Notes-ptBR: @localization(locale="ptBR", key="Description", namespace="ToC")@
-## Notes-ruRU: @localization(locale="ruRU", key="Description", namespace="ToC")@
-## Notes-zhCN: @localization(locale="zhCN", key="Description", namespace="ToC")@
-## Notes-zhTW: @localization(locale="zhTW", key="Description", namespace="ToC")@
-#@end-non-debug@
-#@debug@
-## Title: Atlas |r|cFF0099FF[Shadowlands]|r
-## Notes: Shadowlands' Maps
-#@end-debug@
+﻿## Interface: 120105
+## Title: Atlas Shadowlands
+## Notes: Shadowlands instance maps for Atlas
+## Title-deDE: Atlas Shadowlands
+## Notes-deDE: Instanzkarten aus Shadowlands für Atlas
+## Title-esES: Atlas Shadowlands
+## Notes-esES: Mapas de instancias de Shadowlands para Atlas
+## Title-esMX: Atlas Shadowlands
+## Notes-esMX: Mapas de instancias de Shadowlands para Atlas
+## Title-frFR: Atlas Shadowlands
+## Notes-frFR: Cartes des instances de Shadowlands pour Atlas
+## Title-itIT: Atlas Shadowlands
+## Notes-itIT: Mappe delle istanze di Shadowlands per Atlas
+## Title-koKR: Atlas 어둠땅
+## Notes-koKR: Atlas용 어둠땅 인스턴스 지도
+## Title-ptBR: Atlas Shadowlands
+## Notes-ptBR: Mapas de instâncias de Shadowlands para Atlas
+## Title-ruRU: Atlas Темные Земли
+## Notes-ruRU: Карты подземелий и рейдов Темных Земель для Atlas
+## Title-zhCN: Atlas 暗影国度
+## Notes-zhCN: Atlas 的暗影国度副本地图
+## Title-zhTW: Atlas 暗影之境
+## Notes-zhTW: Atlas 的暗影之境副本地圖
+## Author: arith, nanderson11
 ## Version: @project-version@
-## Author: arith
-## X-Date: @project-date-iso@
-## X-Email: atlas.addon at gmail dot com
-## X-Website: http://www.atlasmod.com
-## X-Category: Map
+## IconTexture: Interface\WorldMap\WorldMap-Icon
 ## RequiredDeps: Atlas
+## Category: Map
+## Category-deDE: Karte
+## Category-esES: Mapa
+## Category-esMX: Mapa
+## Category-frFR: Carte
+## Category-itIT: Mappa
+## Category-koKR: 지도
+## Category-ptBR: Mapa
+## Category-ruRU: Карта
+## Category-zhCN: 地图
+## Category-zhTW: 地圖
+## X-Category: Map & Minimap
+## X-Date: @project-date-iso@
+## X-License: GPLv2
+## X-Website: https://www.curseforge.com/wow/addons/atlas-shadowlands
+## X-Curse-Project-ID: 583339
+## X-WoWI-ID: 27271
 
 Locale\Locales.xml
 Core\Core.lua

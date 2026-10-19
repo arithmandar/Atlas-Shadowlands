@@ -1,0 +1,86 @@
+name: Feature or improvement request
+description: Suggest a feature or improvement for Atlas core.
+title: "[Suggestion]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Atlas!
+
+        Use this form to suggest a specific improvement to Atlas core, such as its shared interface, 
+        map navigation, settings, or integration with map modules and plugins.
+
+        For suggestions about a specific map module or plugin, please use its repository when possible.
+
+        If you are unsure which component is responsible, you may submit your suggestion here. 
+        You do not need to understand the internal architecture of Atlas.
+
+        Please search existing issues before submitting.
+        For open-ended ideas or broader conversations, use Discussions.
+        If an existing feature is not working correctly, use Bug report.
+
+  - type: dropdown
+    id: suggestion-area
+    attributes:
+      label: Area of improvement
+      description: Select the closest match.
+      options:
+        - Interface and usability
+        - Map selection, browsing, or navigation
+        - Settings and customization
+        - Map module or plugin integration
+        - Accessibility
+        - Localization or documentation
+        - Other or not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this improve?
+      description: |
+        Describe the need, limitation, or use case behind your suggestion.
+        Explain what you are trying to accomplish and who would benefit.
+      placeholder: "When using Atlas, I would like to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested improvement
+      description: |
+        Describe what you would like to see added or changed.
+        You do not need to provide a technical implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: game-context
+    attributes:
+      label: Relevant WoW version or game flavor
+      description: |
+        If relevant, specify Retail, Classic Era, a Classic progression release, or another game variant.
+        Leave this blank if the suggestion is not specific to a game version.
+
+  - type: textarea
+    id: related-components
+    attributes:
+      label: Related map modules or plugins
+      description: |
+        If the suggestion involves particular Atlas map modules or plugins, list them here.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds
+      description: |
+        Describe any existing workarounds or other approaches you have considered.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Screenshots and additional context
+      description: |
+        Add screenshots, mockups, examples, or links to related issues or discussions that help explain the suggestion.
