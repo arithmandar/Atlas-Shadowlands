@@ -26,10 +26,8 @@
 local _G = getfenv(0)
 local _, private = ...
 
-local UnitFactionGroup = _G.UnitFactionGroup
 local LibStub = _G.LibStub
 local BZ = Atlas_GetLocaleLibBabble("LibBabble-SubZone-3.0")
-local BF = Atlas_GetLocaleLibBabble("LibBabble-Faction-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale(private.addon_name)
 local ALC = LibStub("AceLocale-3.0"):GetLocale("Atlas")
 ---@type AtlasAddon
@@ -183,6 +181,7 @@ db.AtlasMaps = {
 		Module = "Atlas_Shadowlands",
 		PrevMap = "DeOtherSideA",
 		NextMap = "DeOtherSideC",
+		{ BLUE.." B) "..CONNECTION, 10001 },
 		{ WHIT.." 2) "..getBossName("Hakkar the Soulflayer", 2408), 2408 },
 	},
 	DeOtherSideC= {
@@ -196,6 +195,7 @@ db.AtlasMaps = {
 		Module = "Atlas_Shadowlands",
 		PrevMap = "DeOtherSideB",
 		NextMap = "DeOtherSideD",
+		{ BLUE.." C) "..CONNECTION, 10001 },
 		{ WHIT.." 3) "..getBossName("The Manastorms", 2409), 2409},
 		{ WHIT..INDENT..getBossName("Millificent Manastorm", 2409, 1), 2409},
 		{ WHIT..INDENT..getBossName("Millhouse Manastorm", 2409, 2), 2409},
@@ -210,6 +210,10 @@ db.AtlasMaps = {
 		JournalInstanceID = 1188,
 		Module = "Atlas_Shadowlands",
 		PrevMap = "DeOtherSideC",
+		{ BLUE.." A) "..CONNECTION, 10001 },
+		{ BLUE.." B) "..CONNECTION, 10002 },
+		{ BLUE.." C) "..CONNECTION, 10003 },
+		{ BLUE.." D) "..ALC["Exit"], 10004 },
 		{ WHIT.." 4) "..getBossName("Mueh'zala", 2410), 2410},
 	},
 	-- Sanguine Depths
@@ -412,8 +416,8 @@ db.AtlasMaps = {
 	-- ///////////////////////////////////////
 	-- Raids
 	-- Castle Nathria
-	CastleNathria = {
-		ZoneName = { BZ["Castle Nathria"] },
+	CastleNathriaA = {
+		ZoneName = { BZ["Castle Nathria"]..ALC["MapA"] },
 		Location = { BZ["Revendreth"] },
 		DungeonID = 2095,
 		DungeonHeroicID = 2094,
@@ -421,6 +425,8 @@ db.AtlasMaps = {
 		WorldMapID = 1735,
 		JournalInstanceID = 1190,
 		Module = "Atlas_Shadowlands",
+		NextMap = "CastleNathriaB",
+		{ BLUE.."A-D) "..CONNECTION, 10001 },
 		{ WHIT.."1) "..getBossName("Shriekwing", 2393), 2393}, 	-- MapID: 1735
 		{ WHIT.."2) "..getBossName("Huntsman Altimor", 2429), 2429}, 	-- MapID: 1735
 		{ WHIT..INDENT..getBossName("Margore", 2429, 2), 2429},
@@ -445,6 +451,17 @@ db.AtlasMaps = {
 		{ WHIT..INDENT..getBossName("Veteran Stoneguard", 2426, 4), 2426},
 		{ WHIT..INDENT..getBossName("Begrudging Waiter", 2426, 5), 2426},
 		{ WHIT.."8) "..getBossName("Sludgefist", 2394), 2394}, 	-- MapID: 1735
+	},
+	CastleNathriaB = {
+		ZoneName = { BZ["Castle Nathria"]..ALC["MapB"] },
+		Location = { BZ["Revendreth"] },
+		DungeonID = 2095,
+		DungeonHeroicID = 2094,
+		DungeonMythicID = 2093,
+		WorldMapID = 1747,
+		JournalInstanceID = 1190,
+		Module = "Atlas_Shadowlands",
+		PrevMap = "CastleNathriaA",
 		{ WHIT.."9) "..getBossName("Stone Legion Generals", 2425), 2425}, 	-- MapID: 1747
 		{ WHIT.."10) "..getBossName("Sire Denathrius", 2424), 2424}, 	-- MapID: 1747
 		{ WHIT..INDENT..getBossName("Remornia", 2424, 2), 2424},
@@ -599,6 +616,43 @@ db.AtlasMaps = {
  };
 /////////////////////////////////////////////]]
 db.AtlasMaps_NPC_DB = {
+    DeOtherSideA = {
+        { "A", 10001, 27, 265 }, -- blue
+        { "1", 2398, 448, 256 }, -- white
+    },
+    DeOtherSideB = {
+        { "B", 10001, 480, 263 }, -- blue
+        { "2", 2408, 110, 263 }, -- white
+    },
+    DeOtherSideC = {
+        { "C", 10001, 146, 52 }, -- blue
+        { "3", 2409, 144, 223 }, -- white
+    },
+    DeOtherSideD = {
+        { "A", 10001, 427, 252 }, -- blue
+        { "B", 10002, 39, 256 }, -- blue
+        { "C", 10003, 187, 429 }, -- blue
+        { "D", 10004, 187, 73 }, -- blue
+        { "4", 2410, 195, 256 }, -- white
+    },
+    CastleNathriaA = {
+        { "A", 10001, 134, 228 }, -- blue
+        { "B", 10001, 225, 256 }, -- blue
+        { "C", 10001, 347, 393 }, -- blue
+        { "D", 10001, 341, 289 }, -- blue
+        { "1", 2393, 225, 232 }, -- white
+        { "2", 2429, 258, 145 }, -- white
+        { "3", 2422, 408, 446 }, -- white
+        { "4", 2418, 402, 222 }, -- white
+        { "5", 2428, 137, 106 }, -- white
+        { "6", 2420, 97, 105 }, -- white
+        { "7", 2426, 429, 341 }, -- white
+        { "8", 2394, 267, 232 }, -- white
+    },
+    CastleNathriaB = {
+        { "9", 2425, 148, 259 }, -- white
+        { "10", 2424, 262, 257 }, -- white
+    },
 	PlaguefallA = {
 		{ "B", 10002, 330, 438 },
 		{ 1, 2419, 299, 72 },
@@ -619,13 +673,6 @@ db.AtlasMaps_NPC_DB = {
 		{ 2, 2387, 171, 250 },
 		{ 3, 2411, 65, 250 },
 		{ 4, 2413, 26, 250 },
-	},
-	DeOtherSideA = {
-		{ "A", 10001, 27, 265 },
-		{ 1, 2398, 445, 255 }
-	},
-	DeOtherSideB = {
-		{ 1, 2408, 110, 260 }
 	},
 	SpiresofAscensionA = {
 		{ 1, 2399, 157, 289 },
@@ -769,6 +816,8 @@ db.MapSeries = {
 	["SepulcheroftheFirstOnesD"] = { "SepulcheroftheFirstOnesA", "SepulcheroftheFirstOnesB", "SepulcheroftheFirstOnesC", "SepulcheroftheFirstOnesD", "SepulcheroftheFirstOnesE", "SepulcheroftheFirstOnesF" },
 	["SepulcheroftheFirstOnesE"] = { "SepulcheroftheFirstOnesA", "SepulcheroftheFirstOnesB", "SepulcheroftheFirstOnesC", "SepulcheroftheFirstOnesD", "SepulcheroftheFirstOnesE", "SepulcheroftheFirstOnesF" },
 	["SepulcheroftheFirstOnesF"] = { "SepulcheroftheFirstOnesA", "SepulcheroftheFirstOnesB", "SepulcheroftheFirstOnesC", "SepulcheroftheFirstOnesD", "SepulcheroftheFirstOnesE", "SepulcheroftheFirstOnesF" },
+	["CastleNathriaA"] = { "CastleNathriaA", "CastleNathriaB" },
+	["CastleNathriaB"] = { "CastleNathriaA", "CastleNathriaB" }
 }
 
 db.SubZoneAssoc = {
@@ -816,7 +865,8 @@ db.DropDownLayouts = {
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
-			"CastleNathria",
+			"CastleNathriaA",
+			"CastleNathriaB",
 			"SanctumofDomination",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
@@ -847,7 +897,8 @@ db.DropDownLayouts = {
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
-			"CastleNathria",
+			"CastleNathriaA",
+			"CastleNathriaB",
 			"SanctumofDomination",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
@@ -878,7 +929,8 @@ db.DropDownLayouts = {
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
-			"CastleNathria",
+			"CastleNathriaA",
+			"CastleNathriaB",
 			"SanctumofDomination",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
@@ -911,7 +963,8 @@ db.DropDownLayouts = {
 			"TazaveshC",
 		},
 		[ATLAS_DDL_PARTYSIZE_10] = {
-			"CastleNathria",
+			"CastleNathriaA",
+			"CastleNathriaB",
 			"SanctumofDomination",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
@@ -921,7 +974,8 @@ db.DropDownLayouts = {
 			"SepulcheroftheFirstOnesF",
 		},
 		[ATLAS_DDL_PARTYSIZE_20TO40] = {
-			"CastleNathria",
+			"CastleNathriaA",
+			"CastleNathriaB",
 			"SanctumofDomination",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
@@ -952,7 +1006,8 @@ db.DropDownLayouts = {
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
-			"CastleNathria",
+			"CastleNathriaA",
+			"CastleNathriaB",
 			"SanctumofDomination",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
