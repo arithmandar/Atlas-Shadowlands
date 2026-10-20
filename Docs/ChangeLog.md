@@ -4,10 +4,12 @@ Atlas Shadowlands is an instance map module for Atlas.
 
 Copyright 2022–2026 Arith Hsu and the Atlas Team.
 
-## v1.54.00 - Unreleased
+## v1.54.00 - 2026-10-21
 - Update the TOC to support WoW 12.1.5.
 - Migrate codes to sync with recent changes in Atlas, to centralize the constant declarations within Atlas.
 - PlaguefallB map revamped.
+- Added De Other Side MapC and MapD
+- Added CastleNathria MapA and MapB
 
 ### Changed
 - Resumed maintenance of Atlas Shadowlands.
