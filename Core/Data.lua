@@ -420,8 +420,8 @@ db.AtlasMaps = {
 		{ WHIT..INDENT..getBossName("Crimson Cabalist", 2424, 3), 2424},
 	},
 	-- Sanctum of Domination
-	SanctumofDomination = {
-		ZoneName = { BZ["Sanctum of Domination"] },
+	SanctumofDominationA = {
+		ZoneName = { BZ["Sanctum of Domination"]..ALC["MapA"] },
 		Location = { BZ["The Maw"] },
 		DungeonID = 2226,
 		DungeonHeroicID = 2227,
@@ -429,12 +429,9 @@ db.AtlasMaps = {
 		WorldMapID = 1998,
 		JournalInstanceID = 1193,
 		Module = "Atlas_Shadowlands",
+		NextMap = "SanctumofDominationB",
 		{ WHIT.."1) "..getBossName("The Tarragrue", 2435), 2435}, 	-- MapID: 1998
 		{ WHIT.."2) "..getBossName("The Eye of the Jailer", 2442), 2442}, 	-- MapID: 1999
-		{ WHIT.."3) "..getBossName("The Nine", 2439), 2439}, 	-- MapID: 1999
-		{ WHIT..INDENT..getBossName("Kyra", 2439, 1), 2439},
-		{ WHIT..INDENT..getBossName("Signe", 2439, 2), 2439},
-		{ WHIT..INDENT..getBossName("Skyja", 2439, 3), 2439},
 		{ WHIT.."4) "..getBossName("Remnant of Ner'zhul", 2444), 2444}, 	-- MapID: 2000
 		{ WHIT..INDENT..getBossName("Orb of Torment", 2444, 2), 2444},
 		{ WHIT..INDENT..getBossName("Helm of Dominion", 2444, 3), 2444},
@@ -452,6 +449,47 @@ db.AtlasMaps = {
 		{ WHIT..INDENT..getBossName("Fatespawn Anomaly", 2447, 3), 2447},
 		{ WHIT..INDENT..getBossName("Shade of Destiny", 2447, 4), 2447},
 		{ WHIT.."9) "..getBossName("Kel'Thuzad", 2440), 2440}, 	-- MapID: 2001
+		{ WHIT.."10) "..getBossName("Sylvanas Windrunner", 2441), 2441}, 	-- MapID: 2002
+	},
+	SanctumofDominationB = {
+		ZoneName = { BZ["Sanctum of Domination"]..ALC["MapB"] },
+		Location = { BZ["The Maw"] },
+		DungeonID = 2226,
+		DungeonHeroicID = 2227,
+		DungeonMythicID = 2228,
+		WorldMapID = 1999,
+		JournalInstanceID = 1193,
+		Module = "Atlas_Shadowlands",
+		PrevMap = "SanctumofDominationA",
+		NextMap = "SanctumofDominationC",
+		{ WHIT.."3) "..getBossName("The Nine", 2439), 2439}, 	-- MapID: 1999
+		{ WHIT..INDENT..getBossName("Kyra", 2439, 1), 2439},
+		{ WHIT..INDENT..getBossName("Signe", 2439, 2), 2439},
+		{ WHIT..INDENT..getBossName("Skyja", 2439, 3), 2439},
+	},
+	SanctumofDominationC = {
+		ZoneName = { BZ["Sanctum of Domination"]..ALC["MapC"] },
+		Location = { BZ["The Maw"] },
+		DungeonID = 2226,
+		DungeonHeroicID = 2227,
+		DungeonMythicID = 2228,
+		WorldMapID = 2001,
+		JournalInstanceID = 1193,
+		Module = "Atlas_Shadowlands",
+		PrevMap = "SanctumofDominationB",
+		NextMap = "SanctumofDominationD",
+		{ WHIT.."9) "..getBossName("Kel'Thuzad", 2440), 2440}, 	-- MapID: 2001
+	},
+	SanctumofDominationD = {
+		ZoneName = { BZ["Sanctum of Domination"]..ALC["MapD"] },
+		Location = { BZ["The Maw"] },
+		DungeonID = 2226,
+		DungeonHeroicID = 2227,
+		DungeonMythicID = 2228,
+		WorldMapID = 2002,
+		JournalInstanceID = 1193,
+		Module = "Atlas_Shadowlands",
+		PrevMap = "SanctumofDominationC",
 		{ WHIT.."10) "..getBossName("Sylvanas Windrunner", 2441), 2441}, 	-- MapID: 2002
 	},
 	-- Sepulcher of the First Ones
@@ -666,6 +704,25 @@ db.AtlasMaps_NPC_DB = {
 		{ 1,   2395,  295, 240 },
 		{ 2,   2391,  84,  240 },
 	},
+    SanctumofDominationA = {
+        { "1", 2435, 252, 247 }, -- white
+        { "2", 2442, 242, 483 }, -- white
+        { "4", 2444, 470, 199 }, -- white
+        { "5", 2445, 347, 286 }, -- white
+        { "6", 2443, 393, 184 }, -- white
+        { "7", 2446, 312, 131 }, -- white
+        { "8", 2447, 282, 313 }, -- white
+        { "9", 2440, 140, 249 }, -- white
+    },
+    SanctumofDominationB = {
+        { "3", 2439, 252, 247 }, -- white
+    },
+    SanctumofDominationC = {
+        { "9", 2440, 151, 247 }, -- white
+    },
+    SanctumofDominationD = {
+        { "10", 2441, 249, 247 }, -- white
+    },
 	SepulcheroftheFirstOnesA = {
 		{ 1, 2458, 278, 235 },
 	},
@@ -743,8 +800,12 @@ db.SubZoneData = {
 ]]
 db.OutdoorZoneToAtlas = {
 --	[BZ["Dalaran"]] = 			"AssaultonVioletHold",
-	[BZ["Sanguine Depths"]] = 	"SanguineDepths",
-
+	[BZ["Sanguine Depths"]] = "SanguineDepths",
+	[BZ["The Maw"]]			= "SanctumofDominationA",
+	[BZ["Maldraxxus"]]			= "PlaguefallA",
+	[BZ["Ardenweald"]]			= "MistsofTirnaScithe",
+	[BZ["Revendreth"]]			= "HallsofAtonement",
+	[BZ["The In-Between"]]		= "TazaveshA",
 }
 
 db.EntToInstMatches = {
@@ -773,7 +834,11 @@ db.MapSeries = {
 	["SepulcheroftheFirstOnesE"] = { "SepulcheroftheFirstOnesA", "SepulcheroftheFirstOnesB", "SepulcheroftheFirstOnesC", "SepulcheroftheFirstOnesD", "SepulcheroftheFirstOnesE", "SepulcheroftheFirstOnesF" },
 	["SepulcheroftheFirstOnesF"] = { "SepulcheroftheFirstOnesA", "SepulcheroftheFirstOnesB", "SepulcheroftheFirstOnesC", "SepulcheroftheFirstOnesD", "SepulcheroftheFirstOnesE", "SepulcheroftheFirstOnesF" },
 	["CastleNathriaA"] = { "CastleNathriaA", "CastleNathriaB" },
-	["CastleNathriaB"] = { "CastleNathriaA", "CastleNathriaB" }
+	["CastleNathriaB"] = { "CastleNathriaA", "CastleNathriaB" },
+	["SanctumofDominationA"] = { "SanctumofDominationA", "SanctumofDominationB", "SanctumofDominationC", "SanctumofDominationD" },
+	["SanctumofDominationB"] = { "SanctumofDominationA", "SanctumofDominationB", "SanctumofDominationC", "SanctumofDominationD" },
+	["SanctumofDominationC"] = { "SanctumofDominationA", "SanctumofDominationB", "SanctumofDominationC", "SanctumofDominationD" },
+	["SanctumofDominationD"] = { "SanctumofDominationA", "SanctumofDominationB", "SanctumofDominationC", "SanctumofDominationD" },
 }
 
 db.SubZoneAssoc = {
@@ -821,7 +886,10 @@ db.DropDownLayouts = {
 			"TazaveshC",
 			"CastleNathriaA",
 			"CastleNathriaB",
-			"SanctumofDomination",
+			"SanctumofDominationA",
+			"SanctumofDominationB",
+			"SanctumofDominationC",
+			"SanctumofDominationD",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
 			"SepulcheroftheFirstOnesC",
@@ -851,7 +919,10 @@ db.DropDownLayouts = {
 			"TazaveshC",
 			"CastleNathriaA",
 			"CastleNathriaB",
-			"SanctumofDomination",
+			"SanctumofDominationA",
+			"SanctumofDominationB",
+			"SanctumofDominationC",
+			"SanctumofDominationD",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
 			"SepulcheroftheFirstOnesC",
@@ -881,7 +952,10 @@ db.DropDownLayouts = {
 			"TazaveshC",
 			"CastleNathriaA",
 			"CastleNathriaB",
-			"SanctumofDomination",
+			"SanctumofDominationA",
+			"SanctumofDominationB",
+			"SanctumofDominationC",
+			"SanctumofDominationD",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
 			"SepulcheroftheFirstOnesC",
@@ -913,7 +987,10 @@ db.DropDownLayouts = {
 		[ATLAS_DDL_PARTYSIZE_10] = {
 			"CastleNathriaA",
 			"CastleNathriaB",
-			"SanctumofDomination",
+			"SanctumofDominationA",
+			"SanctumofDominationB",
+			"SanctumofDominationC",
+			"SanctumofDominationD",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
 			"SepulcheroftheFirstOnesC",
@@ -924,7 +1001,10 @@ db.DropDownLayouts = {
 		[ATLAS_DDL_PARTYSIZE_20TO40] = {
 			"CastleNathriaA",
 			"CastleNathriaB",
-			"SanctumofDomination",
+			"SanctumofDominationA",
+			"SanctumofDominationB",
+			"SanctumofDominationC",
+			"SanctumofDominationD",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
 			"SepulcheroftheFirstOnesC",
@@ -954,7 +1034,10 @@ db.DropDownLayouts = {
 			"TazaveshC",
 			"CastleNathriaA",
 			"CastleNathriaB",
-			"SanctumofDomination",
+			"SanctumofDominationA",
+			"SanctumofDominationB",
+			"SanctumofDominationC",
+			"SanctumofDominationD",
 			"SepulcheroftheFirstOnesA",
 			"SepulcheroftheFirstOnesB",
 			"SepulcheroftheFirstOnesC",
