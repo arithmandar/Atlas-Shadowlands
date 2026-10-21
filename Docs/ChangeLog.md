@@ -1,8 +1,13 @@
+# Atlas Shadowlands is an instance map module for Atlas.
+
+- Copyright 2022–2026 Arith Hsu and the Atlas Team.
+
 # Changelog
 
-Atlas Shadowlands is an instance map module for Atlas.
-
-Copyright 2022–2026 Arith Hsu and the Atlas Team.
+## v1.54.01 - 2026-10-21
+- Update Maps: 
+  - Theater of Pain
+  - Sanguine Depths
 
 ## v1.54.00 - 2026-10-21
 - Update the TOC to support WoW 12.1.5.

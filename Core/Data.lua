@@ -217,8 +217,8 @@ db.AtlasMaps = {
 		{ WHIT.." 4) "..getBossName("Mueh'zala", 2410), 2410},
 	},
 	-- Sanguine Depths
-	SanguineDepthsA = {
-		ZoneName = { BZ["Sanguine Depths"]..ALC["MapA"] },
+	SanguineDepths = {
+		ZoneName = { BZ["Sanguine Depths"] },
 		Location = { BZ["Revendreth"] },
 		DungeonID = 2082,
 		DungeonHeroicID = 2083,
@@ -226,23 +226,11 @@ db.AtlasMaps = {
 		WorldMapID = 1675,
 		JournalInstanceID = 1189,
 		Module = "Atlas_Shadowlands",
-		NextMap = "SanguineDepthsB",
-		{ WHIT.." 1) "..getBossName("Kryxis the Voracious", 2388), 2388},
-		{ WHIT.." 2) "..getBossName("Executor Tarvold", 2415), 2415},
+		{ WHIT.." 1) "..getBossName("Kryxis the Voracious", 2388), 2388}, -- map 1675
+		{ WHIT.." 2) "..getBossName("Executor Tarvold", 2415), 2415}, -- map 1675
 		{ WHIT..INDENT..getBossName("Fleeting Manifestation", 2415, 2), 2415},
-	},
-	SanguineDepthsB = {
-		ZoneName = { BZ["Sanguine Depths"]..ALC["MapB"] },
-		Location = { BZ["Revendreth"] },
-		DungeonID = 2082,
-		DungeonHeroicID = 2083,
-		DungeonMythicID = 2112,
-		WorldMapID = 1676,
-		JournalInstanceID = 1189,
-		Module = "Atlas_Shadowlands",
-		PrevMap = "SanguineDepthsA",
-		{ WHIT.." 3) "..getBossName("General Kaal", 2407), 2407},
-		{ WHIT.." 4) "..getBossName("Grand Proctor Beryllia", 2421), 2421},
+		{ WHIT.." 3) "..getBossName("General Kaal", 2407), 2407}, -- map 1676
+		{ WHIT.." 4) "..getBossName("Grand Proctor Beryllia", 2421), 2421}, -- map 1676
 	},
 	-- Spires of Ascension
 	SpiresofAscensionA = {
@@ -319,8 +307,8 @@ db.AtlasMaps = {
 		{ WHIT..INDENT..getBossName("Corsair Brute", 2449, 2),   2449 },
 	},
 	-- Theater of Pain
-	TheaterofPainA = {
-		ZoneName = { BZ["Theater of Pain"]..ALC["MapA"] },
+	TheaterofPain = {
+		ZoneName = { BZ["Theater of Pain"] },
 		Location = { BZ["Maldraxxus"] },
 		DungeonID = 2078,
 		DungeonHeroicID = 2079,
@@ -328,51 +316,15 @@ db.AtlasMaps = {
 		WorldMapID = 1683,
 		JournalInstanceID = 1187,
 		Module = "Atlas_Shadowlands",
-		NextMap = "TheaterofPainB",
-		{ BLUE.." A) "..ENTRANCE,                                           10001 },
-		{ WHIT.." 1) "..getBossName("An Affront of Challengers", 2397),      2397 },
-		{ WHIT..INDENT..getBossName("Dessia the Decapitator", 2397, 1),      2397 },
-		{ WHIT..INDENT..getBossName("Paceran the Virulent", 2397, 2),        2397 },
-		{ WHIT..INDENT..getBossName("Sathel the Accursed", 2397, 3),         2397 },
+		{ BLUE.." A) "..ENTRANCE, 10001 },
+		{ WHIT.." 1) "..getBossName("An Affront of Challengers", 2397), 2397 },
+		{ WHIT..INDENT..getBossName("Dessia the Decapitator", 2397, 1),2397 },
+		{ WHIT..INDENT..getBossName("Paceran the Virulent", 2397, 2), 2397 },
+		{ WHIT..INDENT..getBossName("Sathel the Accursed", 2397, 3), 2397 },
 		{ WHIT.." 2) "..getBossName("Mordretha, the Endless Empress", 2417), 2417 },
-	},
-	TheaterofPainB = {
-		ZoneName = { BZ["Theater of Pain"]..ALC["MapB"] },
-		Location = { BZ["Maldraxxus"] },
-		DungeonID = 2078,
-		DungeonHeroicID = 2079,
-		DungeonMythicID = 2115,
-		WorldMapID = 1684,
-		JournalInstanceID = 1187,
-		Module = "Atlas_Shadowlands",
-		PrevMap = "TheaterofPainA",
-		NextMap = "TheaterofPainC",
 		{ WHIT.." 3) "..getBossName("Xav the Unfallen", 2390), 2390 },
-	},
-	TheaterofPainC = {
-		ZoneName = { BZ["Theater of Pain"]..ALC["MapC"] },
-		Location = { BZ["Maldraxxus"] },
-		DungeonID = 2078,
-		DungeonHeroicID = 2079,
-		DungeonMythicID = 2115,
-		WorldMapID = 1685,
-		JournalInstanceID = 1187,
-		Module = "Atlas_Shadowlands",
-		PrevMap = "TheaterofPainB",
-		NextMap = "TheaterofPainD",
 		{ WHIT.." 4) "..getBossName("Kul'tharok", 2389), 2389 },
-	},
-	TheaterofPainD = {
-		ZoneName = { BZ["Theater of Pain"]..ALC["MapD"] },
-		Location = { BZ["Maldraxxus"] },
-		DungeonID = 2078,
-		DungeonHeroicID = 2079,
-		DungeonMythicID = 2115,
-		WorldMapID = 1687,
-		JournalInstanceID = 1187,
-		Module = "Atlas_Shadowlands",
-		PrevMap = "TheaterofPainC",
-		{ WHIT.." 5) "..getBossName("Gorechop", 2401),            2401 },
+		{ WHIT.." 5) "..getBossName("Gorechop", 2401), 2401 },
 		{ WHIT..INDENT..getBossName("Oozing Leftovers", 2401, 2), 2401 },
 	},
 	-- The Necrotic Wake
@@ -635,6 +587,12 @@ db.AtlasMaps_NPC_DB = {
         { "D", 10004, 187, 73 }, -- blue
         { "4", 2410, 195, 256 }, -- white
     },
+    SanguineDepths = {
+        { "1", 2388, 316, 202 }, -- white
+        { "2", 2415, 294, 433 }, -- white
+        { "3", 2407, 330, 401 }, -- white
+        { "4", 2421, 155, 251 }, -- white
+    },
     CastleNathriaA = {
         { "A", 10001, 134, 228 }, -- blue
         { "B", 10001, 225, 256 }, -- blue
@@ -648,6 +606,13 @@ db.AtlasMaps_NPC_DB = {
         { "6", 2420, 97, 105 }, -- white
         { "7", 2426, 429, 341 }, -- white
         { "8", 2394, 267, 232 }, -- white
+    },
+    TheaterofPain = {
+        { "1", 2397, 256, 269 }, -- white
+        { "2", 2417, 214, 188 }, -- white
+        { "3", 2390, 351, 400 }, -- white
+        { "4", 2389, 255, 111 }, -- white
+        { "5", 2401, 160, 238 }, -- white
     },
     CastleNathriaB = {
         { "9", 2425, 148, 259 }, -- white
@@ -700,11 +665,6 @@ db.AtlasMaps_NPC_DB = {
 		{ "B", 10002, 118, 244 },
 		{ 1,   2395,  295, 240 },
 		{ 2,   2391,  84,  240 },
-	},
-	TheaterofPainA = {
-		{ "A", 10001, 250, 340 },
-		{ 1,   2397,  246, 270 },
-		{ 2,   2417,  220, 210 },
 	},
 	SepulcheroftheFirstOnesA = {
 		{ 1, 2458, 278, 235 },
@@ -783,6 +743,8 @@ db.SubZoneData = {
 ]]
 db.OutdoorZoneToAtlas = {
 --	[BZ["Dalaran"]] = 			"AssaultonVioletHold",
+	[BZ["Sanguine Depths"]] = 	"SanguineDepths",
+
 }
 
 db.EntToInstMatches = {
@@ -800,14 +762,8 @@ db.MapSeries = {
 	["DeOtherSideB"] = { "DeOtherSideA", "DeOtherSideB", "DeOtherSideC", "DeOtherSideD" },
 	["DeOtherSideC"] = { "DeOtherSideA", "DeOtherSideB", "DeOtherSideC", "DeOtherSideD" },
 	["DeOtherSideD"] = { "DeOtherSideA", "DeOtherSideB", "DeOtherSideC", "DeOtherSideD" },
-	["SanguineDepthsA"] = { "SanguineDepthsA", "SanguineDepthsB" },
-	["SanguineDepthsB"] = { "SanguineDepthsA", "SanguineDepthsB" },
 	["SpiresofAscensionA"] = { "SpiresofAscensionA", "SpiresofAscensionB" },
 	["SpiresofAscensionB"] = { "SpiresofAscensionA", "SpiresofAscensionB" },
-	["TheaterofPainA"] = { "TheaterofPainA", "TheaterofPainB", "TheaterofPainC", "TheaterofPainD" },
-	["TheaterofPainB"] = { "TheaterofPainA", "TheaterofPainB", "TheaterofPainC", "TheaterofPainD" },
-	["TheaterofPainC"] = { "TheaterofPainA", "TheaterofPainB", "TheaterofPainC", "TheaterofPainD" },
-	["TheaterofPainD"] = { "TheaterofPainA", "TheaterofPainB", "TheaterofPainC", "TheaterofPainD" },
 	["TheNecroticWakeA"] = { "TheNecroticWakeA", "TheNecroticWakeB" },
 	["TheNecroticWakeB"] = { "TheNecroticWakeA", "TheNecroticWakeB" },
 	["SepulcheroftheFirstOnesA"] = { "SepulcheroftheFirstOnesA", "SepulcheroftheFirstOnesB", "SepulcheroftheFirstOnesC", "SepulcheroftheFirstOnesD", "SepulcheroftheFirstOnesE", "SepulcheroftheFirstOnesF" },
@@ -856,12 +812,10 @@ db.DropDownLayouts = {
 			"TheNecroticWakeB",
 			"PlaguefallA",
 			"PlaguefallB",
+			"SanguineDepths",
 			"SpiresofAscensionA",
 			"SpiresofAscensionB",
-			"TheaterofPainA",
-			"TheaterofPainB",
-			"TheaterofPainC",
-			"TheaterofPainD",
+			"TheaterofPain",
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
@@ -888,12 +842,10 @@ db.DropDownLayouts = {
 			"TheNecroticWakeB",
 			"PlaguefallA",
 			"PlaguefallB",
+			"SanguineDepths",
 			"SpiresofAscensionA",
 			"SpiresofAscensionB",
-			"TheaterofPainA",
-			"TheaterofPainB",
-			"TheaterofPainC",
-			"TheaterofPainD",
+			"TheaterofPain",
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
@@ -920,12 +872,10 @@ db.DropDownLayouts = {
 			"TheNecroticWakeB",
 			"PlaguefallA",
 			"PlaguefallB",
+			"SanguineDepths",
 			"SpiresofAscensionA",
 			"SpiresofAscensionB",
-			"TheaterofPainA",
-			"TheaterofPainB",
-			"TheaterofPainC",
-			"TheaterofPainD",
+			"TheaterofPain",
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
@@ -952,12 +902,10 @@ db.DropDownLayouts = {
 			"TheNecroticWakeB",
 			"PlaguefallA",
 			"PlaguefallB",
+			"SanguineDepths",
 			"SpiresofAscensionA",
 			"SpiresofAscensionB",
-			"TheaterofPainA",
-			"TheaterofPainB",
-			"TheaterofPainC",
-			"TheaterofPainD",
+			"TheaterofPain",
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
@@ -997,12 +945,10 @@ db.DropDownLayouts = {
 			"TheNecroticWakeB",
 			"PlaguefallA",
 			"PlaguefallB",
+			"SanguineDepths",
 			"SpiresofAscensionA",
 			"SpiresofAscensionB",
-			"TheaterofPainA",
-			"TheaterofPainB",
-			"TheaterofPainC",
-			"TheaterofPainD",
+			"TheaterofPain",
 			"TazaveshA",
 			"TazaveshB",
 			"TazaveshC",
