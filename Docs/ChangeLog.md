@@ -4,6 +4,9 @@
 
 # Changelog
 
+## v1.54.02 - 2026-10-22
+- Added Sanctum of Domination maps
+
 ## v1.54.01 - 2026-10-21
 - Update Maps: 
   - Theater of Pain
