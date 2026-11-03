@@ -4,6 +4,10 @@
 
 # Changelog
 
+## v1.54.03 - 2026-11-03
+- Added The Necrotic Wake map B
+- Added Theater of Pain map B
+
 ## v1.54.02 - 2026-10-22
 - Added Sanctum of Domination maps
 
