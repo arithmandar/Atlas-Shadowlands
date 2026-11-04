@@ -103,6 +103,7 @@ db.AtlasMaps = {
 		JournalInstanceID = 1183,
 		Module = "Atlas_Shadowlands",
 		NextMap = "PlaguefallB",
+		{ BLUE.." A) "..ENTRANCE, 10001 },
 		{ BLUE.." B) "..CONNECTION, 10002 },
 		{ WHIT.." 1) "..getBossName("Globgrog", 2419), 2419},
 		{ WHIT..INDENT..getBossName("Slimy Morsel", 2419, 2), 2419},
@@ -140,8 +141,8 @@ db.AtlasMaps = {
 		{ WHIT.." 3) "..getBossName("Tred'ova", 2405), 2405},
 	},
 	-- Halls of Atonement
-	HallsofAtonement = {
-		ZoneName = { BZ["Halls of Atonement"] },
+	HallsofAtonementA = {
+		ZoneName = { BZ["Halls of Atonement"]..ALC["MapA"] },
 		Location = { BZ["Revendreth"] },
 		DungeonID = 2074,
 		DungeonHeroicID = 2075,
@@ -149,11 +150,39 @@ db.AtlasMaps = {
 		WorldMapID = 1663,
 		JournalInstanceID = 1185,
 		Module = "Atlas_Shadowlands",
+		NextMap = "HallsofAtonementB",
+		{ BLUE.." A) "..ENTRANCE, 10001 },
+		{ BLUE.." B) "..CONNECTION, 10002 },
 		{ WHIT.." 1) "..getBossName("Halkias, the Sin-Stained Goliath", 2406), 2406},
 		{ WHIT.." 2) "..getBossName("Echelon", 2387), 2387},
+	},
+	HallsofAtonementB = {
+		ZoneName = { BZ["Halls of Atonement"]..ALC["MapB"] },
+		Location = { BZ["Revendreth"] },
+		DungeonID = 2074,
+		DungeonHeroicID = 2075,
+		DungeonMythicID = 2109,
+		WorldMapID = 1664,
+		JournalInstanceID = 1185,
+		Module = "Atlas_Shadowlands",
+		PrevMap = "HallsofAtonementA",
+		NextMap = "HallsofAtonementC",
+		{ BLUE.." B-C) "..CONNECTION, 10002 },
 		{ WHIT.." 3) "..getBossName("High Adjudicator Aleez", 2411), 2411},
 		{ WHIT..INDENT..getBossName("Ghastly Parishioner", 2411, 2), 2411},
 		{ WHIT..INDENT..getBossName("Vessel of Atonement", 2411, 3), 2411},
+	},
+	HallsofAtonementC = {
+		ZoneName = { BZ["Halls of Atonement"]..ALC["MapC"] },
+		Location = { BZ["Revendreth"] },
+		DungeonID = 2074,
+		DungeonHeroicID = 2075,
+		DungeonMythicID = 2109,
+		WorldMapID = 1665,
+		JournalInstanceID = 1185,
+		Module = "Atlas_Shadowlands",
+		PrevMap = "HallsofAtonementB",
+		{ BLUE.." C) "..CONNECTION, 10002 },
 		{ WHIT.." 4) "..getBossName("Lord Chamberlain", 2413), 2413},
 	},
 	-- De Other Side
@@ -163,12 +192,13 @@ db.AtlasMaps = {
 		DungeonID = 2080,
 		DungeonHeroicID = 2081,
 		DungeonMythicID = 2108,
-		WorldMapID = 1677,
+		WorldMapID = 1680,
 		JournalInstanceID = 1188,
 		Module = "Atlas_Shadowlands",
 		NextMap = "DeOtherSideB",
-		{ BLUE.." A) "..CONNECTION, 10001 },
-		{ WHIT.." 1) "..getBossName("Dealer Xy'exa", 2398), 2398},
+		{ BLUE.." A) "..ENTRANCE, 10001 },
+		{ BLUE.." B-D) "..CONNECTION, 10002 },
+		{ WHIT.." 4) "..getBossName("Mueh'zala", 2410), 2410},
 	},
 	DeOtherSideB = {
 		ZoneName = { BZ["De Other Side"]..ALC["MapB"] },
@@ -176,13 +206,13 @@ db.AtlasMaps = {
 		DungeonID = 2080,
 		DungeonHeroicID = 2081,
 		DungeonMythicID = 2108,
-		WorldMapID = 1679,
+		WorldMapID = 1677,
 		JournalInstanceID = 1188,
 		Module = "Atlas_Shadowlands",
 		PrevMap = "DeOtherSideA",
 		NextMap = "DeOtherSideC",
 		{ BLUE.." B) "..CONNECTION, 10001 },
-		{ WHIT.." 2) "..getBossName("Hakkar the Soulflayer", 2408), 2408 },
+		{ WHIT.." 1) "..getBossName("Dealer Xy'exa", 2398), 2398},
 	},
 	DeOtherSideC= {
 		ZoneName = { BZ["De Other Side"]..ALC["MapC"] },
@@ -196,7 +226,7 @@ db.AtlasMaps = {
 		PrevMap = "DeOtherSideB",
 		NextMap = "DeOtherSideD",
 		{ BLUE.." C) "..CONNECTION, 10001 },
-		{ WHIT.." 3) "..getBossName("The Manastorms", 2409), 2409},
+		{ WHIT.." 2) "..getBossName("The Manastorms", 2409), 2409},
 		{ WHIT..INDENT..getBossName("Millificent Manastorm", 2409, 1), 2409},
 		{ WHIT..INDENT..getBossName("Millhouse Manastorm", 2409, 2), 2409},
 	},
@@ -206,15 +236,12 @@ db.AtlasMaps = {
 		DungeonID = 2080,
 		DungeonHeroicID = 2081,
 		DungeonMythicID = 2108,
-		WorldMapID = 1680,
+		WorldMapID = 1679,
 		JournalInstanceID = 1188,
 		Module = "Atlas_Shadowlands",
 		PrevMap = "DeOtherSideC",
-		{ BLUE.." A) "..CONNECTION, 10001 },
-		{ BLUE.." B) "..CONNECTION, 10002 },
-		{ BLUE.." C) "..CONNECTION, 10003 },
-		{ BLUE.." D) "..ALC["Exit"], 10004 },
-		{ WHIT.." 4) "..getBossName("Mueh'zala", 2410), 2410},
+		{ BLUE.." D) "..CONNECTION, 10001 },
+		{ WHIT.." 3) "..getBossName("Hakkar the Soulflayer", 2408), 2408 },
 	},
 	-- Sanguine Depths
 	SanguineDepths = {
@@ -626,23 +653,23 @@ db.AtlasMaps = {
 /////////////////////////////////////////////]]
 db.AtlasMaps_NPC_DB = {
     DeOtherSideA = {
-        { "A", 10001, 27, 265 }, -- blue
-        { "1", 2398, 448, 256 }, -- white
+        { "A", 10001, 249, 26 }, -- blue
+        { "B", 10002, 403, 251 }, -- blue
+        { "C", 10002, 251, 380 }, -- blue
+        { "D", 10002, 115, 250 }, -- blue
+        { "4", 2410, 252, 251 }, -- white
     },
     DeOtherSideB = {
-        { "B", 10001, 480, 263 }, -- blue
-        { "2", 2408, 110, 263 }, -- white
+        { "B", 10001, 51, 254 }, -- blue
+        { "1", 2398, 466, 254 }, -- white
     },
     DeOtherSideC = {
-        { "C", 10001, 146, 52 }, -- blue
-        { "3", 2409, 144, 223 }, -- white
+        { "C", 10001, 253, 223 }, -- blue
+        { "2", 2409, 249, 391 }, -- white
     },
     DeOtherSideD = {
-        { "A", 10001, 427, 252 }, -- blue
-        { "B", 10002, 39, 256 }, -- blue
-        { "C", 10003, 187, 429 }, -- blue
-        { "D", 10004, 187, 73 }, -- blue
-        { "4", 2410, 195, 256 }, -- white
+        { "D", 10001, 490, 263 }, -- blue
+        { "3", 2408, 237, 266 }, -- white
     },
     SanguineDepths = {
         { "1", 2388, 316, 202 }, -- white
@@ -685,6 +712,7 @@ db.AtlasMaps_NPC_DB = {
         { "10", 2424, 262, 257 }, -- white
     },
 	PlaguefallA = {
+		{ "A", 10001, 90, 53 },
 		{ "B", 10002, 330, 438 },
 		{ 1, 2419, 299, 72 },
 		{ 2, 2403, 375, 227 },
@@ -699,12 +727,21 @@ db.AtlasMaps_NPC_DB = {
 		{ 2, 2402, 303, 256 },
 		{ 3, 2405, 100, 364 },
 	},
-	HallsofAtonement = {
-		{ 1, 2406, 290, 250 },
-		{ 2, 2387, 171, 250 },
-		{ 3, 2411, 65, 250 },
-		{ 4, 2413, 26, 250 },
-	},
+    HallsofAtonementA = {
+        { "A", 10001, 476, 251 }, -- blue
+        { "B", 10002, 137, 251 }, -- blue
+        { "1", 2406, 291, 250 }, -- white
+        { "2", 2387, 174, 250 }, -- white
+    },
+    HallsofAtonementB = {
+        { "B", 10002, 423, 249 }, -- blue
+        { "C", 10002, 105, 187 }, -- blue
+        { "3", 2411, 109, 249 }, -- white
+    },
+    HallsofAtonementC = {
+        { "C", 10002, 360, 252 }, -- blue
+        { "4", 2413, 63, 256 }, -- white
+    },
 	SpiresofAscensionA = {
 		{ 1, 2399, 157, 289 },
 		{ 2, 2416, 309, 228 },
@@ -837,7 +874,7 @@ db.OutdoorZoneToAtlas = {
 	[BZ["The Maw"]]			= "SanctumofDominationA",
 	[BZ["Maldraxxus"]]			= "PlaguefallA",
 	[BZ["Ardenweald"]]			= "MistsofTirnaScithe",
-	[BZ["Revendreth"]]			= "HallsofAtonement",
+	[BZ["Revendreth"]]			= "HallsofAtonementA",
 	[BZ["The In-Between"]]		= "TazaveshA",
 }
 
@@ -877,6 +914,9 @@ db.MapSeries = {
 	["TazaveshC"] = { "TazaveshA", "TazaveshB", "TazaveshC" },
 	["TheaterofPainA"] = { "TheaterofPainA", "TheaterofPainB" },
 	["TheaterofPainB"] = { "TheaterofPainA", "TheaterofPainB" },
+	["HallsofAtonementA"] = { "HallsofAtonementA", "HallsofAtonementB", "HallsofAtonementC" },
+	["HallsofAtonementB"] = { "HallsofAtonementA", "HallsofAtonementB", "HallsofAtonementC" },
+	["HallsofAtonementC"] = { "HallsofAtonementA", "HallsofAtonementB", "HallsofAtonementC" },
 }
 
 db.SubZoneAssoc = {
@@ -909,7 +949,9 @@ db.DropDownLayouts = {
 			"DeOtherSideB",
 			"DeOtherSideC",
 			"DeOtherSideD",
-			"HallsofAtonement",
+			"HallsofAtonementA",
+			"HallsofAtonementB",
+			"HallsofAtonementC",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"TheNecroticWakeB",
@@ -943,7 +985,9 @@ db.DropDownLayouts = {
 			"DeOtherSideB",
 			"DeOtherSideC",
 			"DeOtherSideD",
-			"HallsofAtonement",
+			"HallsofAtonementA",
+			"HallsofAtonementB",
+			"HallsofAtonementC",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"TheNecroticWakeB",
@@ -977,7 +1021,9 @@ db.DropDownLayouts = {
 			"DeOtherSideB",
 			"DeOtherSideC",
 			"DeOtherSideD",
-			"HallsofAtonement",
+			"HallsofAtonementA",
+			"HallsofAtonementB",
+			"HallsofAtonementC",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"TheNecroticWakeB",
@@ -1011,7 +1057,9 @@ db.DropDownLayouts = {
 			"DeOtherSideB",
 			"DeOtherSideC",
 			"DeOtherSideD",
-			"HallsofAtonement",
+			"HallsofAtonementA",
+			"HallsofAtonementB",
+			"HallsofAtonementC",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"TheNecroticWakeB",
@@ -1061,7 +1109,9 @@ db.DropDownLayouts = {
 			"DeOtherSideB",
 			"DeOtherSideC",
 			"DeOtherSideD",
-			"HallsofAtonement",
+			"HallsofAtonementA",
+			"HallsofAtonementB",
+			"HallsofAtonementC",
 			"MistsofTirnaScithe",
 			"TheNecroticWakeA",
 			"TheNecroticWakeB",

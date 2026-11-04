@@ -4,6 +4,10 @@
 
 # Changelog
 
+## v1.54.04 - 2026-11-04
+- De Other Side maps revamped
+- Halls of Atonement maps revamped
+
 ## v1.54.03 - 2026-11-03
 - Added The Necrotic Wake map B
 - Added Theater of Pain map B
